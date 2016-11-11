@@ -1,18 +1,41 @@
 Circuit: * /Users/tatyanagubin/winterg/2016-design-project/subcircuits/0_winterg_assembly.asc
 
-Error on line 9 : v5 s5 0 v
-	 Unknown parameter "v"
-Error on line 10 : v6 s6 0 v
-	 Unknown parameter "v"
-Error on line 11 : v7 s7 0 v
-	 Unknown parameter "v"
 WARNING: Specified period is not longer than the sum of Trise, Tfall, and Ton for v4.  Increasing period to 0.000100002
 WARNING: Specified period is not longer than the sum of Trise, Tfall, and Ton for v3.  Increasing period to 0.000100002
 WARNING: Specified period is not longer than the sum of Trise, Tfall, and Ton for v2.  Increasing period to 0.000100002
 WARNING: Specified period is not longer than the sum of Trise, Tfall, and Ton for v1.  Increasing period to 0.000100002
 WARNING: Specified period is not longer than the sum of Trise, Tfall, and Ton for v0.  Increasing period to 0.000100002
 WARNING: Node X1:N010 is floating.
+WARNING: Node X2:N001 is floating.
 
+Model "x2:m27:pch": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "m:x2:m27:1": Length shorter than recommended for a level 1 MOSFET.
+Model "x2:m26:nch": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "m:x2:m26:1": Length shorter than recommended for a level 1 MOSFET.
+Model "x2:m25:pch": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "m:x2:m25:1": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x2:m25:1": Width narrower than recommended for a level 1 MOSFET.
+Model "x2:m24:pch": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "m:x2:m24:1": Length shorter than recommended for a level 1 MOSFET.
+Model "x2:m23:nch": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "m:x2:m23:1": Length shorter than recommended for a level 1 MOSFET.
+Model "x2:m22:pch": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "m:x2:m22:1": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x2:m22:1": Width narrower than recommended for a level 1 MOSFET.
+Model "x2:m21:pch": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "m:x2:m21:1": Length shorter than recommended for a level 1 MOSFET.
+Model "x2:m20:nch": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "m:x2:m20:1": Length shorter than recommended for a level 1 MOSFET.
+Model "x2:m19:pch": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "m:x2:m19:1": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x2:m19:1": Width narrower than recommended for a level 1 MOSFET.
+Model "x2:m18:pch": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "m:x2:m18:1": Length shorter than recommended for a level 1 MOSFET.
+Model "x2:m17:nch": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "m:x2:m17:1": Length shorter than recommended for a level 1 MOSFET.
+Model "x2:m16:pch": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "m:x2:m16:1": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x2:m16:1": Width narrower than recommended for a level 1 MOSFET.
 Model "x2:m15:pch": Oxide thickness thinner than recommended for a level 1 MOSFET.
 Instance "m:x2:m15:1": Length shorter than recommended for a level 1 MOSFET.
 Model "x2:m14:nch": Oxide thickness thinner than recommended for a level 1 MOSFET.
@@ -81,15 +104,15 @@ Model "x1:m3:nch": Oxide thickness thinner than recommended for a level 1 MOSFET
 Instance "m:x1:m3:1": Length shorter than recommended for a level 1 MOSFET.
 Model "x1:m2:nch": Oxide thickness thinner than recommended for a level 1 MOSFET.
 Instance "m:x1:m2:1": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x1:m2:1": Width narrower than recommended for a level 1 MOSFET.
 Model "x1:m1:nch": Oxide thickness thinner than recommended for a level 1 MOSFET.
 Instance "m:x1:m1:1": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x1:m1:1": Width narrower than recommended for a level 1 MOSFET.
 Model "x1:m0:nch": Oxide thickness thinner than recommended for a level 1 MOSFET.
 Instance "m:x1:m0:1": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:x1:m0:1": Width narrower than recommended for a level 1 MOSFET.
 Model "x1:m8:nch": Oxide thickness thinner than recommended for a level 1 MOSFET.
 Instance "m:x1:m8:1": Length shorter than recommended for a level 1 MOSFET.
-V7: Missing value, assumed 0V @ DC
-V6: Missing value, assumed 0V @ DC
-V5: Missing value, assumed 0V @ DC
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
 Gmin = 10
@@ -170,22 +193,58 @@ Ignoring empty pin current: Ix(m15:d)
 Ignoring empty pin current: Ix(m15:g)
 Ignoring empty pin current: Ix(m15:s)
 Ignoring empty pin current: Ix(m15:vdd)
-Ignoring empty pin current: Ix(m0:d)
-Ignoring empty pin current: Ix(m0:g)
-Ignoring empty pin current: Ix(m0:s)
-Ignoring empty pin current: Ix(m0:gnd)
 Ignoring empty pin current: Ix(m16:d)
 Ignoring empty pin current: Ix(m16:g)
 Ignoring empty pin current: Ix(m16:s)
-Ignoring empty pin current: Ix(m16:gnd)
+Ignoring empty pin current: Ix(m16:vdd)
 Ignoring empty pin current: Ix(m17:d)
 Ignoring empty pin current: Ix(m17:g)
 Ignoring empty pin current: Ix(m17:s)
-Ignoring empty pin current: Ix(m17:vdd)
+Ignoring empty pin current: Ix(m17:gnd)
 Ignoring empty pin current: Ix(m18:d)
 Ignoring empty pin current: Ix(m18:g)
 Ignoring empty pin current: Ix(m18:s)
 Ignoring empty pin current: Ix(m18:vdd)
+Ignoring empty pin current: Ix(m19:d)
+Ignoring empty pin current: Ix(m19:g)
+Ignoring empty pin current: Ix(m19:s)
+Ignoring empty pin current: Ix(m19:vdd)
+Ignoring empty pin current: Ix(m20:d)
+Ignoring empty pin current: Ix(m20:g)
+Ignoring empty pin current: Ix(m20:s)
+Ignoring empty pin current: Ix(m20:gnd)
+Ignoring empty pin current: Ix(m21:d)
+Ignoring empty pin current: Ix(m21:g)
+Ignoring empty pin current: Ix(m21:s)
+Ignoring empty pin current: Ix(m21:vdd)
+Ignoring empty pin current: Ix(m22:d)
+Ignoring empty pin current: Ix(m22:g)
+Ignoring empty pin current: Ix(m22:s)
+Ignoring empty pin current: Ix(m22:vdd)
+Ignoring empty pin current: Ix(m23:d)
+Ignoring empty pin current: Ix(m23:g)
+Ignoring empty pin current: Ix(m23:s)
+Ignoring empty pin current: Ix(m23:gnd)
+Ignoring empty pin current: Ix(m24:d)
+Ignoring empty pin current: Ix(m24:g)
+Ignoring empty pin current: Ix(m24:s)
+Ignoring empty pin current: Ix(m24:vdd)
+Ignoring empty pin current: Ix(m25:d)
+Ignoring empty pin current: Ix(m25:g)
+Ignoring empty pin current: Ix(m25:s)
+Ignoring empty pin current: Ix(m25:vdd)
+Ignoring empty pin current: Ix(m26:d)
+Ignoring empty pin current: Ix(m26:g)
+Ignoring empty pin current: Ix(m26:s)
+Ignoring empty pin current: Ix(m26:gnd)
+Ignoring empty pin current: Ix(m27:d)
+Ignoring empty pin current: Ix(m27:g)
+Ignoring empty pin current: Ix(m27:s)
+Ignoring empty pin current: Ix(m27:vdd)
+Ignoring empty pin current: Ix(m0:d)
+Ignoring empty pin current: Ix(m0:g)
+Ignoring empty pin current: Ix(m0:s)
+Ignoring empty pin current: Ix(m0:gnd)
 Ignoring empty pin current: Ix(x1:s0)
 Ignoring empty pin current: Ix(x1:s1)
 Ignoring empty pin current: Ix(x1:s2)
@@ -195,7 +254,6 @@ Ignoring empty pin current: Ix(x1:s5)
 Ignoring empty pin current: Ix(x1:s6)
 Ignoring empty pin current: Ix(x1:s7)
 Ignoring empty pin current: Ix(x1:vout)
-Ignoring empty pin current: Ix(x1:vg)
 Ignoring empty pin current: Ix(x2:v_current)
 Ignoring empty pin current: Ix(x2:vdd)
 Ignoring empty pin current: Ix(x2:vin_1)
@@ -263,22 +321,58 @@ Ignoring empty pin current: Ix(m15:d)
 Ignoring empty pin current: Ix(m15:g)
 Ignoring empty pin current: Ix(m15:s)
 Ignoring empty pin current: Ix(m15:vdd)
-Ignoring empty pin current: Ix(m0:d)
-Ignoring empty pin current: Ix(m0:g)
-Ignoring empty pin current: Ix(m0:s)
-Ignoring empty pin current: Ix(m0:gnd)
 Ignoring empty pin current: Ix(m16:d)
 Ignoring empty pin current: Ix(m16:g)
 Ignoring empty pin current: Ix(m16:s)
-Ignoring empty pin current: Ix(m16:gnd)
+Ignoring empty pin current: Ix(m16:vdd)
 Ignoring empty pin current: Ix(m17:d)
 Ignoring empty pin current: Ix(m17:g)
 Ignoring empty pin current: Ix(m17:s)
-Ignoring empty pin current: Ix(m17:vdd)
+Ignoring empty pin current: Ix(m17:gnd)
 Ignoring empty pin current: Ix(m18:d)
 Ignoring empty pin current: Ix(m18:g)
 Ignoring empty pin current: Ix(m18:s)
 Ignoring empty pin current: Ix(m18:vdd)
+Ignoring empty pin current: Ix(m19:d)
+Ignoring empty pin current: Ix(m19:g)
+Ignoring empty pin current: Ix(m19:s)
+Ignoring empty pin current: Ix(m19:vdd)
+Ignoring empty pin current: Ix(m20:d)
+Ignoring empty pin current: Ix(m20:g)
+Ignoring empty pin current: Ix(m20:s)
+Ignoring empty pin current: Ix(m20:gnd)
+Ignoring empty pin current: Ix(m21:d)
+Ignoring empty pin current: Ix(m21:g)
+Ignoring empty pin current: Ix(m21:s)
+Ignoring empty pin current: Ix(m21:vdd)
+Ignoring empty pin current: Ix(m22:d)
+Ignoring empty pin current: Ix(m22:g)
+Ignoring empty pin current: Ix(m22:s)
+Ignoring empty pin current: Ix(m22:vdd)
+Ignoring empty pin current: Ix(m23:d)
+Ignoring empty pin current: Ix(m23:g)
+Ignoring empty pin current: Ix(m23:s)
+Ignoring empty pin current: Ix(m23:gnd)
+Ignoring empty pin current: Ix(m24:d)
+Ignoring empty pin current: Ix(m24:g)
+Ignoring empty pin current: Ix(m24:s)
+Ignoring empty pin current: Ix(m24:vdd)
+Ignoring empty pin current: Ix(m25:d)
+Ignoring empty pin current: Ix(m25:g)
+Ignoring empty pin current: Ix(m25:s)
+Ignoring empty pin current: Ix(m25:vdd)
+Ignoring empty pin current: Ix(m26:d)
+Ignoring empty pin current: Ix(m26:g)
+Ignoring empty pin current: Ix(m26:s)
+Ignoring empty pin current: Ix(m26:gnd)
+Ignoring empty pin current: Ix(m27:d)
+Ignoring empty pin current: Ix(m27:g)
+Ignoring empty pin current: Ix(m27:s)
+Ignoring empty pin current: Ix(m27:vdd)
+Ignoring empty pin current: Ix(m0:d)
+Ignoring empty pin current: Ix(m0:g)
+Ignoring empty pin current: Ix(m0:s)
+Ignoring empty pin current: Ix(m0:gnd)
 Ignoring empty pin current: Ix(x1:s0)
 Ignoring empty pin current: Ix(x1:s1)
 Ignoring empty pin current: Ix(x1:s2)
@@ -288,7 +382,6 @@ Ignoring empty pin current: Ix(x1:s5)
 Ignoring empty pin current: Ix(x1:s6)
 Ignoring empty pin current: Ix(x1:s7)
 Ignoring empty pin current: Ix(x1:vout)
-Ignoring empty pin current: Ix(x1:vg)
 Ignoring empty pin current: Ix(x2:v_current)
 Ignoring empty pin current: Ix(x2:vdd)
 Ignoring empty pin current: Ix(x2:vin_1)
@@ -297,20 +390,20 @@ Ignoring empty pin current: Ix(x2:vout_1)
 Ignoring empty pin current: Ix(x2:vout_2)
 Ignoring empty pin current: Ix(x2:vout_3)
 
-Date: Fri Nov 11 01:04:11 2016
-Total elapsed time: 1.139 seconds.
+Date: Fri Nov 11 04:57:59 2016
+Total elapsed time: 11.740 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 44976
-traniter = 44541
-tranpoints = 13063
-accept = 9418
-rejected = 3645
-matrix size = 40
-fillins = 8
+totiter = 393357
+traniter = 392786
+tranpoints = 98602
+accept = 70869
+rejected = 27733
+matrix size = 49
+fillins = 16
 solver = Normal
-Matrix Compiler1: 4194 object code size  1.3/0.9/[0.3]
-Matrix Compiler2: off
+Matrix Compiler1: 6470 object code size  2.2/1.5/[1.0]
+Matrix Compiler2:     423 opcodes
 
