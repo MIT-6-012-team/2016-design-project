@@ -1,11 +1,11 @@
 * /Users/tatyanagubin/winterg/2016-design-project/subcircuits/0_winterg_assembly.asc
-XX1 S0 S1 S2 S3 S4 S5 S6 S7 VDD N001 N002 3_dac_winterg
-XX2 0 VDD NC_01 Freq_out NC_02 NC_03 NC_04 2_oscillator_winterg
-V0 S0 0 PULSE(0 3 0 1ns 1ns 100ns 0.0 1)
-V1 S1 0 PULSE(0 3 100ns 1ns 1ns 100ns 0 1)
-V2 S2 0 PULSE(0 3 200ns 1ns 1ns 100ns 0 1)
-V3 S3 0 PULSE(0 3 300ns 1ns 1ns 100ns 0 1)
-V4 S4 0 PULSE(0 3 400ns 1ns 1ns 100ns 0 1)
+XX1 S0 S1 S2 S3 S4 S5 S6 S7 VDD N001 NC_01 3_dac_winterg
+XX2 N001 VDD NC_02 Freq_out NC_03 NC_04 NC_05 2_oscillator_winterg params: Wn=6u
+V0 S0 0 PULSE(0 3 0 1ns 1ns 100us 0.0 1)
+V1 S1 0 PULSE(0 3 100us 1ns 1ns 100us 0 1)
+V2 S2 0 PULSE(0 3 200us 1ns 1ns 100us 0 1)
+V3 S3 0 PULSE(0 3 300us 1ns 1ns 100us 0 1)
+V4 S4 0 PULSE(0 3 400us 1ns 1ns 100us 0 1)
 V5 S5 0 V
 V6 S6 0 V
 V7 S7 0 V
@@ -13,7 +13,7 @@ VDD VDD 0 3v
 
 * block symbol definitions
 .subckt 3_dac_winterg S0 S1 S2 S3 S4 S5 S6 S7 VDD Vout Vg
-Iref VDD N009 0.1µA
+Iref VDD N009 1000µA
 XM8 N009 N009 0 N010 NFET lg=1.5u,wg=10u
 XM0 N001 N009 0 0 NFET lg=1.5u,wg=10u
 XM1 N002 N009 0 0 NFET lg=1.5u,wg=10u
@@ -23,41 +23,40 @@ XM4 N005 N009 0 0 NFET lg=1.5u,wg=10u
 XM5 N006 N009 0 0 NFET lg=1.5u,wg=10u
 XM6 N007 N009 0 0 NFET lg=1.5u,wg=10u
 XM7 N008 N009 0 0 NFET lg=1.5u,wg=10u
-XM9 Vout S0 N001 0 NFET lg=1.5u,wg=6u
-XM10 Vout S1 N002 0 NFET lg=1.5u,wg=12u
-XM11 Vout S2 N003 0 NFET lg=1.5u,wg=18u
-XM12 Vout S3 N004 0 NFET lg=1.5u,wg=24u
-XM13 Vout S4 N005 0 NFET lg=1.5u,wg=30u
-XM14 Vout S5 N006 0 NFET lg=1.5u,wg=36u
-XM15 Vout S6 N007 0 NFET lg=1.5u,wg=42u
-XM16 Vout S7 N008 0 NFET lg=1.5u,wg=48u
+XM9 Vout S0 N001 0 NFET lg=1.5u,wg=12u
+XM10 Vout S1 N002 0 NFET lg=1.5u,wg=24u
+XM11 Vout S2 N003 0 NFET lg=1.5u,wg=36u
+XM12 Vout S3 N004 0 NFET lg=1.5u,wg=48u
+XM13 Vout S4 N005 0 NFET lg=1.5u,wg=60u
+XM14 Vout S5 N006 0 NFET lg=1.5u,wg=72u
+XM15 Vout S6 N007 0 NFET lg=1.5u,wg=84u
+XM16 Vout S7 N008 0 NFET lg=1.5u,wg=96u
 XM17 Vg Vout Vout Vg PFET lg=1.5u,wg=6u
 XM18 VDD 0 Vg 0 PFET lg=1.5u,wg=10u
 .inc mosfets.sub
 .ends 3_dac_winterg
 
 .subckt 2_oscillator_winterg V_current VDD Vin_1 Vout Vout_1 Vout_2 Vout_3
-XM1 N001 V_current Vout_1 N001 PFET lg=1.5u,wg=6u
-XM2 Vout_1 Vout 0 0 NFET lg=1.5u,wg=10u
-XM3 VDD Vout N001 0 PFET lg=1.5u,wg=10u
-XM4 N002 V_current Vout_2 N002 PFET lg=1.5u,wg=6u
-XM5 Vout_2 Vout_1 0 0 NFET lg=1.5u,wg=10u
-XM6 VDD Vout_1 N002 0 PFET lg=1.5u,wg=10u
-XM7 N003 V_current Vout_3 N003 PFET lg=1.5u,wg=6u
-XM8 Vout_3 Vout_2 0 0 NFET lg=1.5u,wg=10u
-XM9 VDD Vout_2 N003 0 PFET lg=1.5u,wg=10u
-C1 Vout_1 0 2.5pF Rser=0.01
-C2 Vout_2 0 2.5pF Rser=0.01
-C3 Vout 0 2.5pF Rser=0.01
-XM10 N004 V_current Vout N004 PFET lg=1.5u,wg=6u
-XM11 Vout Vout_3 0 0 NFET lg=1.5u,wg=10u
-XM12 VDD Vout_3 N004 0 PFET lg=1.5u,wg=10u
-C4 Vout_3 0 2.5pF Rser=0.01
+XM1 N003 V_current N001 N003 PFET lg=1.5u,wg=6u
+XM2 N001 Vout 0 0 NFET lg=1.5u,wg=10u
+XM3 VDD Vout N003 0 PFET lg=1.5u,wg=10u
+XM4 N004 V_current N002 N004 PFET lg=1.5u,wg=6u
+XM5 N002 N001 0 0 NFET lg=1.5u,wg=10u
+XM6 VDD N001 N004 0 PFET lg=1.5u,wg=10u
+XM7 N005 V_current N006 N005 PFET lg=1.5u,wg=6u
+XM8 N006 N002 0 0 NFET lg=1.5u,wg=10u
+XM9 VDD N002 N005 0 PFET lg=1.5u,wg=10u
+XM10 N008 V_current N007 N008 PFET lg=1.5u,wg=6u
+XM11 N007 N006 0 0 NFET lg=1.5u,wg=10u
+XM12 VDD N006 N008 0 PFET lg=1.5u,wg=10u
+XM13 N009 V_current Vout N009 PFET lg=1.5u,wg=6u
+XM14 Vout N007 0 0 NFET lg=1.5u,wg=10u
+XM15 VDD N007 N009 0 PFET lg=1.5u,wg=10u
 .include mosfets.sub
 .ends 2_oscillator_winterg
 
 .inc mosfets.sub
-.tran 0 500ns
+.tran 0 100us 50us
 * Test Voltages
 * Test Script
 * Small test\ncurrent resistor
